@@ -1,92 +1,117 @@
-/* ================================
-   全体設定 — 背景画像 + 全体スタイル
-================================ */
+/* 全体背景 */
 body {
-  margin: 0;
-  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
-  background: url("https://cytube.mm428.net/up/src/up39741.jpg") no-repeat center center fixed;
-   background-size: 80%;   /* ← 背景画像を縮小（例：80%に） */
-  color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: "Yu Gothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", sans-serif;
+    background-color: #f0f3f5; /* 淡いグレー系 */
+    background-image: url("https://cytube.mm428.net/up/src/up39741.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #222;
 }
 
-/* ページ中央のコンテンツエリア */
+/* コンテンツ全体のガラス風ボックス */
 .content-bg {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
-/* ガラス風オーバーレイ（白の半透明レイヤー） */
-.content-glass {
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(8px);
-  z-index: -1;
-}
-
+/* 透過カード風の背景 */
 .content-inner {
-  padding: 20px;
+    background: rgba(255, 255, 255, 0.85); /* 白半透明 */
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ================================
-   全セクション共通スタイル（カード風） 
-================================ */
-section {
-  background: rgba(255, 255, 255, 0.80); /* 背景は白に近い淡いカード色 */
-  padding: 20px 25px;
-  margin: 28px 0;
-  border-radius: 18px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  line-height: 1.75;
-}
-
-/* 見出しデザイン */
-h3, h4, h5 {
-  margin-top: 0;
-  padding-bottom: 6px;
-  border-bottom: 2px solid rgba(200,200,200,0.5);
-  color: #2a2a2a;
-}
-
-/* セクションごとの左ボーダー（淡色で色分け） */
+/* ヘッダー */
 .top {
-  border-left: 6px solid rgba(223, 231, 245, 0.7);
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-.outline {
-  border-left: 6px solid rgba(207, 232, 255, 0.8); /* 淡い水色 */
-}
-
-.explanation {
-  border-left: 6px solid rgba(217, 243, 210, 0.8); /* 淡い緑 */
-}
-
-.emote {
-  border-left: 6px solid rgba(245, 223, 255, 0.8); /* 淡い紫 */
-}
-
-.regulation {
-  margin-top: 35px;
-  border-left: 6px solid rgba(255, 231, 194, 0.8); /* 淡いオレンジ/クリーム */
-}
-
-.qa {
-  border-left: 6px solid rgba(255, 214, 214, 0.8); /* 淡いピンク */
-}
-
-/* リストの余白調整 */
-ul {
-  padding-left: 20px;
-  margin-top: 8px;
-}
-
-/* トップ画像のスタイル */
 .top img {
-  width: 95px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 2px solid #444; /* 少しクール感 */
 }
 
+.top div > div:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #1a1a1a;
+}
 
+/* 見出し */
+h3, h4, h5, h6 {
+    font-family: "Georgia", serif;
+    color: #1b3a57; /* 知的で落ち着いた青 */
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* 段落 */
+p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* リスト */
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* 分類1と分類2のカード風セクション */
+.regulation h5, .regulation h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #d13f3f; /* アクセントカラー */
+}
+
+.regulation ul {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px 20px;
+    border-radius: 10px;
+    list-style-type: square;
+}
+
+/* Q&A */
+.qa {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #ccc;
+}
+
+/* エモート */
+.emote ul {
+    background: rgba(240, 248, 255, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* リンクや強調 */
+b {
+    color: #d13f3f;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top img {
+        margin-bottom: 10px;
+    }
+}
