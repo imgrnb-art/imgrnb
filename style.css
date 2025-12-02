@@ -4,7 +4,7 @@ body {
     padding: 0;
     font-family: "Yu Gothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", sans-serif;
     background-color: #f0f3f5; /* 淡いグレー系 */
-    background-image: url("https://cytube.mm428.net/up/src/up39741.jpg");
+    background-image: url("https://github.com/imgrnb-art/imgrnb/blob/main/imgrnborg.jpg?raw=true");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -115,3 +115,4 @@ b {
         margin-bottom: 10px;
     }
 }
+
