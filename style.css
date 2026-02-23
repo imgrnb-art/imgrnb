@@ -49,22 +49,41 @@ body {
     color: #1a1a1a;
 }
 
-/* ナビゲーション */
+/* ===== ナビゲーション（中央揃え＋ボタン風） ===== */
+.page-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .page-links a {
     display: inline-block;
-    margin-right: 1em;            /* 全角スペース1文字分 */
-}
-
-.page-links a:last-child {
-    margin-right: 0;
-}
-
-.page-links a:link,
-.page-links a:visited,
-.page-links a:hover,
-.page-links a:active {
-    color: #191970;               /* クリック後も色を変えない */
+    margin: 0.4em 0.5em;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #191970;
     text-decoration: none;
+    border: 2px solid #191970;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease;
+}
+
+/* クリック後も色固定 */
+.page-links a:visited {
+    color: #191970;
+    border-color: #191970;
+}
+
+/* ホバー */
+.page-links a:hover {
+    background: #191970;
+    color: #ffffff;
+}
+
+/* 押した瞬間 */
+.page-links a:active {
+    transform: translateY(1px);
 }
 
 /* 見出し */
@@ -122,7 +141,7 @@ b {
     color: #d13f3f;
 }
 
-/* モバイル対応 */
+/* ===== モバイル対応 ===== */
 @media (max-width: 768px) {
     .top {
         flex-direction: column;
@@ -137,12 +156,11 @@ b {
         padding: 30px 20px;
     }
 
+    /* ナビを縦並びボタンに */
     .page-links a {
-        display: block;        /* モバイルでは縦並び */
-        margin-bottom: 8px;
-    }
-
-    .page-links a:last-child {
-        margin-bottom: 0;
+        display: block;
+        margin: 8px auto;
+        width: 80%;
+        text-align: center;
     }
 }
