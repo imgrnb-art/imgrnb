@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Yu Gothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", sans-serif;
-    background-color: #f0f3f5; /* 淡いグレー系 */
+    background-color: #f0f3f5;
     background-image: url("https://github.com/imgrnb-art/imgrnb/blob/main/imgrnborg.jpg?raw=true");
     background-size: cover;
     background-position: center;
@@ -15,38 +15,56 @@ body {
 .content-bg {
     display: flex;
     justify-content: center;
-    padding: 60px 30px; /* 上下左右の余白を広く */
+    padding: 60px 30px;
 }
 
 /* 透過カード風の背景 */
 .content-inner {
-    background: rgba(255, 255, 255, 0.7); /* 透明度を少し上げて読みやすく */
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
-    padding: 40px 40px; /* 内側の余白を広く */
-    max-width: 1100px; /* 幅を広くして文章を横に展開 */
+    padding: 40px 40px;
+    max-width: 1100px;
     width: 100%;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* 少し影を強めて浮かせる */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 /* ヘッダー */
 .top {
     display: flex;
     align-items: center;
-    margin-bottom: 40px; /* 下の余白を広く */
+    margin-bottom: 40px;
 }
 
 .top img {
-    width: 140px; /* 少し大きく */
+    width: 140px;
     height: auto;
     border-radius: 10px;
-    margin-right: 25px; /* 余白を広く */
+    margin-right: 25px;
     border: 2px solid #444;
 }
 
 .top div > div:first-child {
-    font-size: 1.6em; /* 少し大きく */
+    font-size: 1.6em;
     font-weight: bold;
     color: #1a1a1a;
+}
+
+/* ナビゲーション */
+.page-links a {
+    display: inline-block;
+    margin-right: 1em;            /* 全角スペース1文字分 */
+}
+
+.page-links a:last-child {
+    margin-right: 0;
+}
+
+.page-links a:link,
+.page-links a:visited,
+.page-links a:hover,
+.page-links a:active {
+    color: #191970;               /* クリック後も色を変えない */
+    text-decoration: none;
 }
 
 /* 見出し */
@@ -61,7 +79,7 @@ h3, h4, h5, h6 {
 
 /* 段落 */
 p {
-    line-height: 1.8; /* 少し行間を広く */
+    line-height: 1.8;
     margin-bottom: 25px;
 }
 
@@ -71,7 +89,7 @@ ul {
     margin-bottom: 20px;
 }
 
-/* 分類1と分類2のカード風セクション */
+/* 分類カード */
 .regulation h5, .regulation h6 {
     margin-top: 25px;
     margin-bottom: 12px;
@@ -79,8 +97,8 @@ ul {
 }
 
 .regulation ul {
-    background: rgba(255, 255, 255, 0.75); /* 少し透明度を上げて読みやすく */
-    padding: 20px 25px; /* 内側余白を広く */
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px 25px;
     border-radius: 12px;
     list-style-type: square;
 }
@@ -99,7 +117,7 @@ ul {
     border-radius: 12px;
 }
 
-/* リンクや強調 */
+/* 強調 */
 b {
     color: #d13f3f;
 }
@@ -116,7 +134,15 @@ b {
     }
 
     .content-inner {
-        padding: 30px 20px; /* モバイルでは少し余白を小さく */
+        padding: 30px 20px;
+    }
+
+    .page-links a {
+        display: block;        /* モバイルでは縦並び */
+        margin-bottom: 8px;
+    }
+
+    .page-links a:last-child {
+        margin-bottom: 0;
     }
 }
-
