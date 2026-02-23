@@ -55,6 +55,7 @@ body {
     margin: 20px 0;
 }
 
+/* 通常：白ボタン＋青文字 */
 .page-links a {
     display: inline-block;
     margin: 0.4em 0.5em;
@@ -65,7 +66,7 @@ body {
     text-decoration: none;
     border: 2px solid #191970;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.6);
+    background: #ffffff;
     transition: all 0.2s ease;
 }
 
@@ -75,7 +76,7 @@ body {
     border-color: #191970;
 }
 
-/* ホバー時 */
+/* ホバー（通常ページのみ反転） */
 .page-links a:hover {
     background: #191970;
     color: #ffffff;
@@ -84,6 +85,20 @@ body {
 /* 押した瞬間 */
 .page-links a:active {
     transform: translateY(1px);
+}
+
+/* ===== 現在ページ（active） ===== */
+/* 濃い背景＋白文字 */
+.page-links a.active {
+    background: #191970;
+    color: #ffffff;
+    border-color: #191970;
+}
+
+/* activeホバー時も色固定 */
+.page-links a.active:hover {
+    background: #191970;
+    color: #ffffff;
 }
 
 /* ===== 見出し ===== */
